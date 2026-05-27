@@ -1,0 +1,21 @@
+{
+  "name": "smart-lead-management-server",
+  "version": "1.0.0",
+  "description": "Backend for Smart Lead Management Automation CRM",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.7.1",
+    "smart-lead-management": "file:.."
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
