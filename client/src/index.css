@@ -7,4 +7,66 @@ body {
   color: #0f172a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #eef4f8;
+}
+
+.water-wave {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(5%);
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.25) 14%, transparent 15%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.22) 14%, transparent 15%),
+    linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.08) 40%, transparent 70%);
+  background-repeat: repeat-x;
+  background-size: 240% 220%, 220% 180%, 100% 100%;
+  animation: wave-swell 8s ease-in-out infinite;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  opacity: 0.7;
+  position: absolute;
+}
+
+.wave-blue {
+  background-color: rgba(59, 130, 246, 0.16);
+}
+
+.wave-emerald {
+  background-color: rgba(16, 185, 129, 0.18);
+}
+
+.wave-amber {
+  background-color: rgba(234, 179, 8, 0.18);
+}
+
+.wave-cyan {
+  background-color: rgba(6, 182, 212, 0.18);
+}
+
+@keyframes wave-swell {
+  0% {
+    transform: translateX(0) translateY(6%);
+  }
+  50% {
+    transform: translateX(-40%) translateY(0);
+  }
+  100% {
+    transform: translateX(0) translateY(6%);
+  }
+}
+
+@keyframes card-refresh {
+  from {
+    opacity: 0.12;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-card-refresh {
+  animation: card-refresh 0.56s ease-out;
 }
